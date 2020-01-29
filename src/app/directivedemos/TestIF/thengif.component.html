@@ -1,0 +1,35 @@
+<h1 *ngIf = 'status'>{{appTitle}} to the world of directive demo </h1> 
+
+<div *ngIf="flag1; else msgElseBlock" >
+   <table class="table table-bordered">
+    <tr>
+      <td>{{emp.empCode}}</td>
+      <td>{{emp.empName}}</td>
+      <td>{{emp.Salary}}</td>
+    </tr>
+    </table>
+</div>
+<ng-template #msgElseBlock>
+   <div>Else Block: No employee available !!!! </div>
+</ng-template>
+
+<div *ngIf="toggleFlag3; then thenBlock else elseBlock">
+
+</div>
+<ng-template #thenBlock>
+    <div>Then Block: Hello World!</div>
+</ng-template>
+<ng-template #elseBlock>
+    <div>Else Block: Hello World!</div>
+</ng-template> 
+
+<h2> Using ngFor </h2>
+<table class="table table-bordered">
+    <tr *ngFor='let i of arr'>
+            <td>{{i}}</td>
+    </tr>
+
+</table>
+<ul>
+    <li *ngFor="let i of arrString">{{i}}</li>
+</ul>

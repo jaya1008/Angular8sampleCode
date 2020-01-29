@@ -1,0 +1,30 @@
+
+<!-- this property syntax for style -->
+<div [style.color]="'orange'">Text  is in  orange</div>
+<div [style.color]="color1">This is using component color variable assigned to style.color property</div>
+<div style="color: aqua;">This is HTML way to give color</div>
+<!-- uses component variables-->
+<div [ngStyle]="{'color': color, 'font-size': size, 'font-weight': 'bold'}">
+  {{svar}}
+</div>
+
+<div [ngStyle]="{'color': color, 'font-size': size + 'px'}">
+  style using ngStyle
+</div>
+
+<!-- this property syntax for css class -->
+<div [className]="'blue'" >CSS class using property syntax, this text is blue</div>
+<div class="blue">Css style</div>
+<p [className]="'style1'"> style applied using class name</p>
+
+<!-- this property syntax for ng-class -->
+<div [ngClass]="['bold-text', 'green']">array of classes(using ngclass) </div>
+<div [ngClass]="'italic-text blue'">string of classes (using ngclass again)</div>
+<div [ngClass]="{'small-text': true, 'red': true}">
+  object of classes (using ngclass -one more example)</div>
+
+<span [ngClass]="displayText">using ngClass</span>
+
+<!-- <p [ngClass]="['style1', 'style2']">
+  Using NgClass with Array.
+</p> -->

@@ -1,0 +1,44 @@
+<div>
+    <h4>Date Pipe Example</h4>
+    <b>Date Fromat:</b> My joing Date is {{jd | date}}<br/>
+    <b>Date Fromat:</b> My joing Date is {{jd | date:"dd/MM/yyyy"}}<br/>
+    <b>Date Fromat:</b> My joing Date is {{jd | date:"fullDate" | uppercase}}<br/>
+    <b>Date Fromat:</b> My joing Date is {{jd | date:"shortTime"}}<br/>
+</div>
+
+<div>
+    <p>{{num1 | percent}} </p>
+    <!-- {minIntegerDigits}.{minFractionDigit}-{maxFractionDigits}
+    minIntegerDigits: 3
+    minFractionDigits: 1
+    maxFractionDigits: 5
+    num1=2.5 250% 
+  10.00
+    
+    -->
+    <p>{{num1 | percent: '2.2-5'}} </p>
+    <p>{{num2 | percent:'2.0-2'}} </p> 
+</div>
+
+<div>
+    <h4>Currency example</h4>
+    <b>Euro:</b> Price of laptop {{650 | currency: 'EUR':true}}<br/>
+    <b>Euro:</b> Price of laptop {{750 | currency: 'USD':false}}<br/>
+    <b>Euro:</b> Price of laptop {{750 | currency: 'INR':true}}
+</div>
+<!-- {minIntegerDigits}.{minFractionDigits}-{maxFractionDigits} -->
+<div>
+    <p> {{12.345456 | number:'3.2-5'}} </p>
+    <p> {{6.345456 | number:'3.2-3'}} </p>
+</div>
+
+<div>
+    <p>Using Json pipe</p><br/>
+    <p>{{course|json}}</p>
+    <p>{{bookObj|json}}</p>
+</div>
+<p>{{xyz|titlecase}}</p>
+
+<h3>Testing pipe type</h3>
+Enter name :=<input type="text" [(ngModel)]="xyz" />
+{{xyz | barcode}} <br>

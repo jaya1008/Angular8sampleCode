@@ -1,0 +1,33 @@
+{{title}}
+<table>
+    <tr> <td> Product Id</td>  <td> <input type="number" [(ngModel)]="id"/> </td></tr>
+    <tr><td> Product Name</td> <td><input type="text" [(ngModel)]="name"/> </td></tr>
+    <tr><td> Product Price</td> <td> <input type="number" [(ngModel)]="price"/></td></tr>
+</table>
+<button (click)="AddData()"> Add Data</button>
+<button (click)="updateData()" *ngIf="isEdited"> Update Data</button>
+
+<table *ngIf="isAdded">
+    <thead>
+        <tr>
+        <th colspan="100%" >Products Data</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+            <th>Products ID</th>
+            <th>Products Name</th>
+            <th>Products Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prod of products;let i=index">
+            <td><button><a (click)="removeProduct(i)">Remove</a></button></td>
+            <td><button><a (click)="editProduct(i)">Edit</a></button></td>
+            <td>{{prod.id}}</td>
+            <td>{{prod.name}}</td>
+            <td>{{prod.price}}</td>
+        </tr>
+    </tbody>
+
+    </table>

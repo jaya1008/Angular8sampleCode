@@ -1,0 +1,38 @@
+<div>
+<form  [formGroup]="loginForm" novalidate (ngSubmit)="save(loginForm.value)">
+    <label>Email</label>
+    <input type="email" formControlName="email">
+    <br>
+    <div style="color:red"
+    *ngIf="!loginForm.controls.email?.valid && (loginForm.controls.email?.dirty ||loginForm.controls.email?.touched)"
+    class="alert alert-danger">
+        <div [hidden]="!loginForm.controls.email.errors.required">
+            email is required
+        </div>
+       
+    </div>
+    <br>
+    <label>Password:</label>
+    <input type="password" formControlName="password">
+    <br>
+    <div style="color:red"
+    *ngIf="!loginForm.controls.password?.valid && (loginForm.controls.password?.dirty ||loginForm.controls.password?.touched)"
+    class="alert alert-danger">
+        <div [hidden]="!loginForm.controls.password.errors.required">
+            email is required
+        </div>
+        <div [hidden]="!loginForm.controls.password.errors.minlength">
+            password Minimum Length is    {{password.errors.minlength?.requiredLength}}
+        </div> 
+    </div>
+    <br>
+    <label>Age:</label>
+    <input type="text" formControlName="age">
+
+    <br>
+    <div class="form-group">
+        <button type="submit" [disabled]="!loginForm.valid">Submit</button>
+    </div>
+</form>
+{{subdata|json}}
+</div>

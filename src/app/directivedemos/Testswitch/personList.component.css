@@ -1,0 +1,20 @@
+.text-success
+{
+    color: blue;
+}
+.text-primary{
+    color: green;
+} 
+.text-danger{
+    color: red;
+}
+.text-warning
+{
+    color:aqua;
+
+}
+.text-normal
+{
+    color: darkorchid;
+
+}

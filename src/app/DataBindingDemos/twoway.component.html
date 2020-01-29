@@ -1,0 +1,22 @@
+
+  <p>one way from component to View</p>
+  <input [ngModel] ="hiMessage1"/><br>
+  <!-- <input bind-value="hiMessage1"/> -->
+ <input [value]="hiMessage1"/>
+  <!-- <input value="{{hiMessage1}}"/> -->
+  {{hiMessage1}} <br/>
+
+
+
+  <p>Two way from component to View and vice versa</p>
+  <input [(ngModel)] ="hiMessage2"/>
+  <p>{{hiMessage2}}</p> <br/>
+
+ 
+
+  <p>Two way from component to View-same as above</p>
+  <input [value] ="Thetitle" (input)="Thetitle=$event.target.value"/> 
+  <p>{{Thetitle}}</p>  
+
+  <button (click)="showMsg()">ClickHere</button>
+  {{msg}}

@@ -1,0 +1,45 @@
+<div align="center">
+	<h2>Model-driven Form</h2>
+	<br>
+	<br>
+	<form [formGroup]="registerForm" novalidate (ngSubmit)=
+	"save(registerForm.value)">
+		<label>First Name:</label>
+		<input type="text" formControlName="first_name">
+		<br>
+		<br>
+		<label>Last Name:</label>
+		<input type="text" formControlName="last_name">
+		<br>
+		<br>
+		<label>Phone:</label>
+		<input type="text" formControlName="phone">
+		<br>
+		<br>
+		<label>Email:</label>
+		<input type="text" formControlName="email">
+		<br>
+		<br>
+		<Div formGroupName="address">
+			<label>Street:</label>
+			<input type="text" formControlName="street">
+			<br>
+			<br>
+			<label>Zip:</label>
+			<input type="text" formControlName="zip">
+			<br>
+			<br>
+			<label>City:</label>
+			<input type="text" formControlName="city">
+			<br>
+			<br>
+		</Div>
+		<button type="submit">Submit</button>
+	</form>
+	<br>
+	<div> myForm value:
+		<br><br>{{registerForm.value | json}}
+	</div>
+</div>
+<br>
+<hr>

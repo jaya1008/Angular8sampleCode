@@ -1,0 +1,17 @@
+<div class="form-group">
+    <label for="options">Options :</label>
+    <div *ngFor="let option of xyzlist">
+        <label>
+            <input type="checkbox"
+                   name="options"
+                   value="{{option.id}}"
+
+                   (change)="onClicked(option, $event)"/>
+            {{option.id}}-- {{option.checked}}
+        </label>
+    </div>
+   
+</div> 
+<button type="submit" (click)="onSubmit()">Submit</button>
+
+{{total}}
