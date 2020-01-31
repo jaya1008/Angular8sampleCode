@@ -10,9 +10,9 @@ export class TheIfComponent
 {
   appTitle: string = 'Welcome';
   status:boolean = true;
-  flag1= false;
+  flag1= true;
   emp=new Employee(1,'Sara Teens',45000) ;
-  toggleFlag3=true;
+  toggleFlag3=false;
 
   arr:number[]=[12,34,5,3,7];
   arrString:string[]=['Angular','javascript','typescript','node.js']

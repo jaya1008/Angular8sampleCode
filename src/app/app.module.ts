@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './productcomp/product.component';
@@ -20,17 +20,19 @@ import { BarCodePipe } from './DemoPipes/pipetype1.pipe';
 import { CustomdemoDirective } from './directivedemos/customhost.directive';
 import { LoginComponent } from './Allaboutcomponents/Login.component';
 import { ConatctFormComponent } from './FormsDemos/contact.component';
+import { ValidFormComponent } from './FormsDemos/validForm.component';
+import { CustomValidatorComp } from './FormsDemos/CustomValidator/customvalid.component';
 @NgModule({
   declarations: [
     AppComponent,ProductComponent,TheIfComponent,EmployeeListComponent,TheSwitchComponent,
     DemoAttrComponents,HighlightDirective,DemoBindingsComponent,
     DemoTwoWayComponent,SimplecurdProduct,TestPipes,ApplyPipe,ApplyPurePipe,PipeComponent,
     BarCodePipe,ProductComponentNew,CustomdemoDirective,LoginComponent,
-    ConatctFormComponent
+    ConatctFormComponent,ValidFormComponent,CustomValidatorComp
 
   ],
   imports: [
-    BrowserModule,FormsModule,
+    BrowserModule,FormsModule,ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

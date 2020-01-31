@@ -5,7 +5,16 @@
         <input type="text"   name="firstname" ngModel
         #firstname="ngModel" required minlength="5">
     </div>
-
+    <div style="color:red"
+    *ngIf="!firstname?.valid && (firstname?.dirty ||firstname?.touched)"
+    class="alert alert-danger">
+        <div [hidden]="!firstname.errors.required">
+            First Name is required
+        </div>
+        <div [hidden]="!firstname.errors.minlength">
+            First Name Minimum Length is    {{firstname.errors.minlength?.requiredLength}}
+        </div>
+    </div>
     <div class="form-group">
         <label for="lastname">Last Name</label>
         <input type="text"   name="lastname"
@@ -38,7 +47,11 @@
             name="pincode" ngModel
             #pincode="ngModel"  required pattern="[0-9]{5}">
         </div>
-
+        <div style="color:red" *ngIf="!pincode?.valid && (pincode?.dirty ||pincode?.touched)" >
+            <div [hidden]="!pincode.errors">
+                Enter a valid pattern as : 5 digits only
+            </div>
+        </div>
     </div>
 
     <div class="form-group">
@@ -46,25 +59,6 @@
     </div>
 
 
-    <div style="color:red"
-    *ngIf="!firstname?.valid && (firstname?.dirty ||firstname?.touched)"
-    class="alert alert-danger">
-        <div [hidden]="!firstname.errors.required">
-            First Name is required
-        </div>
-        <div [hidden]="!firstname.errors.minlength">
-            First Name Minimum Length is    {{firstname.errors.minlength?.requiredLength}}
-        </div>
-    </div>
-
-
-
-
-<div style="color:red" *ngIf="!pincode?.valid && (pincode?.dirty ||pincode?.touched)" >
-        <div [hidden]="!pincode.errors">
-            Enter a valid pattern as : 5 digits only
-        </div>
-    </div>
 </form>
 
 Object is <pre>{{contactForm.value | json }} </pre>
