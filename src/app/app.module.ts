@@ -22,18 +22,25 @@ import { LoginComponent } from './Allaboutcomponents/Login.component';
 import { ConatctFormComponent } from './FormsDemos/contact.component';
 import { ValidFormComponent } from './FormsDemos/validForm.component';
 import { CustomValidatorComp } from './FormsDemos/CustomValidator/customvalid.component';
+import { DemoCheckBox } from './FormsDemos/checkboxdemo.component';
+import { ObservableDemo } from './Services/observabledemos/observabledemo1.component';
+import { ObserverdemoComp } from './Services/observabledemos/observerdemo2.component';
+import { HttpDemo } from './Services/observabledemos/httpclientdemo/httpdemo.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DemoUserComp } from './Services/ServiceUsingHttpClient/demo.component';
 @NgModule({
   declarations: [
     AppComponent,ProductComponent,TheIfComponent,EmployeeListComponent,TheSwitchComponent,
     DemoAttrComponents,HighlightDirective,DemoBindingsComponent,
     DemoTwoWayComponent,SimplecurdProduct,TestPipes,ApplyPipe,ApplyPurePipe,PipeComponent,
     BarCodePipe,ProductComponentNew,CustomdemoDirective,LoginComponent,
-    ConatctFormComponent,ValidFormComponent,CustomValidatorComp
+    ConatctFormComponent,ValidFormComponent,CustomValidatorComp,DemoCheckBox,
+    ObservableDemo,ObserverdemoComp,HttpDemo,DemoUserComp
 
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
