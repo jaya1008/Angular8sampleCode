@@ -15,6 +15,7 @@
 
 <div *ngIf="toggleFlag3; then thenBlock else elseBlock">
 
+
 </div>
 <ng-template #thenBlock>
     <div>Then Block: Hello World!</div>
@@ -22,6 +23,8 @@
 <ng-template #elseBlock>
     <div>Else Block: Hello World!</div>
 </ng-template> 
+
+<!-- {{ arr | slice:1:4}} -->
 
 <h2> Using ngFor </h2>
 <table class="table table-bordered">
@@ -32,4 +35,12 @@
 </table>
 <ul>
     <li *ngFor="let i of arrString">{{i}}</li>
-</ul>
+</ul> 
+<ol>
+    <li *ngFor="let p of person">
+        {{ p.pname}}
+        <ol>
+            <li *ngFor="let f of p.flat">{{f.flatid}}</li>
+        </ol>  
+    </li> 
+</ol> 

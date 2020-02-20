@@ -11,7 +11,7 @@ export class TestPipes {
   jd = new Date(2002,3, 15);
   a: number = 0.259;
   b: number = 12.3495;
-  num1: number = 2.5;
+  num1: number = 0.20;
   num2: number = 0.10;
 
   course:any={code: 'C101', name: 'Professional Azure', Fees: '24000',

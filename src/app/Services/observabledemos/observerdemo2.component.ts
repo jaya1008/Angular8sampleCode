@@ -4,7 +4,7 @@ import {Observable} from 'rxjs';
 @Component({
 	selector: 'ObserverdemoComp-app',
 	template: `
-	  <b>Angular 6 Component Using Observables!</b>
+	  <b>Angular Component Using Observables!</b>
 	 
 	  <h6 style="margin-bottom: 0">VALUES:</h6>
 	  <div *ngFor="let value of values">- {{ value }}</div>

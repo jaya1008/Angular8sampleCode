@@ -1,0 +1,29 @@
+{{title}}
+<div>
+    RollNo <input type="number" [(ngModel)]="rollno"/><br>
+    Name  <input type="text" [(ngModel)]="name"/><br>
+    M1 <input type="number" [(ngModel)]="m1"/><br>
+    M2 <input type="number" [(ngModel)]="m2"/><br>
+    M3 <input type="number" [(ngModel)]="m3"/><br>
+ <button (click)="calculateResult()">CalculateResult</button>
+</div>
+<table class="table table-bordered">
+    <tr>
+        <th>Rollno</th>
+        <th>Name</th>
+        <th>M1</th>
+        <th>M2</th>
+        <th>M3</th>
+        <th>Total</th>
+        <th>Percentage</th>
+    </tr>
+    <tr>
+        <td>{{rollno}}</td>
+        <td>{{name}}</td>
+        <td>{{m1}}</td>
+        <td>{{m2}}</td>
+        <td>{{m3}}</td>
+        <td>{{tot}}</td>
+        <td>{{per}}</td>
+    </tr>
+</table>

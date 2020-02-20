@@ -1,8 +1,9 @@
-<div >
-    <h2>Sign In page !</h2>
-    Enter Username :<input type="text" [(ngModel)]="username"/>
-    Enter Password:<input type="password" [(ngModel)]="password"/>
-    <hr>
-    <button (click)="validate()">SignIn</button>
+{{title}}
+<div>
+
+    Username <input type="text" [(ngModel)]="user.username"/><br>
+    Password <input type="password" [(ngModel)]="user.password" /><br>
+    <button (click)="validate()">SignIn</button> <br>
+
     {{msg}}
 </div>

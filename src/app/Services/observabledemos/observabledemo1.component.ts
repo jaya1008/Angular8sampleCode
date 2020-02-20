@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { Observable, Observer, Subscription } from "rxjs";
-
+import { Observable, Observer, Subscription, of} from "rxjs";
+import { filter, map } from 'rxjs/operators';
 
 @Component({
     selector:'observableDemo-app',
@@ -12,7 +12,7 @@ export class ObservableDemo
     observer:Observer<string>;
   
     subscription: Subscription;
-
+    
   ngOnInit() {
     this.observable = new Observable((observer: Observer<string>) => {
       this.observer = observer;
@@ -25,6 +25,15 @@ export class ObservableDemo
 
     this.observer.next('16');
     this.observer.complete();
+
+    //RxJs operarator
+
+    const squareOf2 = of(1, 2, 3, 4, 5,6)
+  .pipe(
+    filter(num => num % 2 === 0),
+    map(num => num * num)
+  );
+   squareOf2.subscribe( (num) => console.log(num));
   }
 
     handleData(data) {

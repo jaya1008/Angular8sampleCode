@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'demotwo-way',
-  templateUrl: './twoway.component.html',
+  templateUrl: './twoway.component.html'
  })
 export class DemoTwoWayComponent {
   hiMessage1:string="Hi There";

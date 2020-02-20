@@ -28,6 +28,30 @@ import { ObserverdemoComp } from './Services/observabledemos/observerdemo2.compo
 import { HttpDemo } from './Services/observabledemos/httpclientdemo/httpdemo.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DemoUserComp } from './Services/ServiceUsingHttpClient/demo.component';
+import { StudentComponent } from './Allaboutcomponents/student.component';
+import { SampleComponent } from './directivedemos/sample/sample.component';
+import { MessagesComponent } from './RoutingDemos/Messages/messages.component';
+import { PhotosComponent } from './RoutingDemos/Photos/photos.component';
+import { HomeComponent } from './RoutingDemos/home.component';
+import { NotFoundComponent } from './RoutingDemos/not-found.component';
+import { AboutComponent } from './RoutingDemos/about.component';
+import { AboutHomeComponent } from './RoutingDemos/abouthome.component';
+import { AboutItemComponent } from './RoutingDemos/aboutItem.component';
+import { AddsimpleComponent } from './outputdecorator/addparent.component';
+import { AddChildComponent } from './outputdecorator/addchild.component';
+import { MyAppParentComponent } from './CompComm/appparent.component';
+import {AppChildComponent} from './CompComm/appchild.component'
+import { CurrencyDemoComponent } from './pipeextrademo/currency.demo.component';
+import {i18DemoComponent} from './pipeextrademo/i18.demo.component';
+import {PipeDemoComponent} from './pipeextrademo/pipe.demo.component';
+import { ChildComponent } from './CompComm/child/child.component';
+import { ParentComponent } from './CompComm/parent/parent.component'
+import { FilterPipe } from './directivedemos/TestFor/myfilter.pipe';
+import { PostComponent } from './reusablecomp/post.component';
+import { AnotherComponent } from './reusablecomp/anothercomp.component';
+import { ChildforLifeCycle } from './lifecycle/childforlifecycle.component';
+import {LifeCycleComponent} from './lifecycle/lifecycledemo.component'
+import {ParentLifecycle} from './lifecycle/parentforlifecycle.component'
 @NgModule({
   declarations: [
     AppComponent,ProductComponent,TheIfComponent,EmployeeListComponent,TheSwitchComponent,
@@ -35,8 +59,14 @@ import { DemoUserComp } from './Services/ServiceUsingHttpClient/demo.component';
     DemoTwoWayComponent,SimplecurdProduct,TestPipes,ApplyPipe,ApplyPurePipe,PipeComponent,
     BarCodePipe,ProductComponentNew,CustomdemoDirective,LoginComponent,
     ConatctFormComponent,ValidFormComponent,CustomValidatorComp,DemoCheckBox,
-    ObservableDemo,ObserverdemoComp,HttpDemo,DemoUserComp
-
+    ObservableDemo,ObserverdemoComp,HttpDemo,DemoUserComp,StudentComponent, SampleComponent,
+    MessagesComponent, PhotosComponent,
+    HomeComponent, NotFoundComponent,
+    AboutComponent, AboutHomeComponent,
+    AboutItemComponent,AddsimpleComponent,AddChildComponent,MyAppParentComponent,AppChildComponent,
+    CurrencyDemoComponent,i18DemoComponent,PipeDemoComponent, ChildComponent, ParentComponent,FilterPipe
+    ,PostComponent,AnotherComponent,ChildforLifeCycle,
+    LifeCycleComponent,ParentLifecycle
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,

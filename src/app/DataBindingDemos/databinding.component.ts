@@ -5,7 +5,8 @@ import {Component} from '@angular/core';
     styleUrls: ['./databinding.component.css']
 })
 export class DemoBindingsComponent {
-    flag = true;
+	title="DataBinding Demos";
+    flag:boolean= true;
 	website = {
 	     name : 'TechnoSolutions',
 	     url : 'http://www.TechnoloSolutions.com',

@@ -47,7 +47,7 @@ export class HttpDemo
     console.log(url);
    let url1= "https://httpbin.org/get";
     const httpOptions = {
-      params: new HttpParams().set("foo", "moo").set("limit", "25")
+      params: new HttpParams().set("name", "Jayshree").set("limit", "25")
     };
     this.http.get(url, httpOptions).subscribe(res => console.log(res));
   }
@@ -56,10 +56,10 @@ export class HttpDemo
     console.log("POST");
     let url = `${this.apiRoot}/post`;
     const httpOptions = {
-      params: new HttpParams().set("foo", "moo").set("limit", "25")
+      params: new HttpParams().set("name", "Jayshree").set("limit", "25")
     };
     this.http
-      .post(url, { moo: "foo", goo: "loo" }, httpOptions)
+      .post(url, { cname: "SM", location: "FC Road" }, httpOptions)
       .subscribe(res => console.log(res));
   }
 
@@ -67,10 +67,10 @@ export class HttpDemo
     console.log("PUT");
     let url = `${this.apiRoot}/put`;
     const httpOptions = {
-      params: new HttpParams().set("foo", "moo").set("limit", "25")
+      params: new HttpParams().set("name", "Jayshree C").set("limit", "25")
     };
     this.http
-      .put(url, { moo: "foo", goo: "loo" }, httpOptions)
+      .put(url, { cname: "CDAC", location: "Pashan" }, httpOptions)
       .subscribe(res => console.log(res));
   }
 
@@ -78,7 +78,7 @@ export class HttpDemo
     console.log("DELETE");
     let url = `${this.apiRoot}/delete`;
     const httpOptions = {
-      params: new HttpParams().set("foo", "moo").set("limit", "25")
+      params: new HttpParams().set("name", "Madhura").set("limit", "25")
     };
     this.http.delete(url, httpOptions).subscribe(res => console.log(res));
   }

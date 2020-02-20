@@ -1,11 +1,11 @@
- import { Component } from '@angular/core';
+ import { Component, OnInit } from '@angular/core';
 
  @Component({
     selector: 'list-employee',
     templateUrl: './employeeList.component.html',
     styleUrls:['./employeeList.component.css']
 })
-export class EmployeeListComponent {
+export class EmployeeListComponent  {
     employees: any[];
     
     constructor() {
